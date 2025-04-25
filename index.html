@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <title>PASSAPAROLA</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+
 <body>
-  <div id="main-timer">04:00</div>
+  <div class="container-fluid d-flex flex-column justify-content-between align-items-center vh-100 py-3">
 
-  <div class="circle"></div>
+    <div id="main-timer" class="fs-1 text-primary">04:00</div>
 
-  <div class="controls">
-    <button onclick="markLetter('success')">Başarılı</button>
-    <button onclick="markLetter('fail')">Başarısız</button>
-    <button onclick="markLetter('pass')">Pas</button>
-  </div>
+    <div class="circle my-3"></div>
 
-  <div id="stats-container">
-    <div>✔️ Başarılı: <span id="stat-success">0</span></div>
-    <div>❌ Başarısız: <span id="stat-fail">0</span></div>
-    <div>➡️ Pas: <span id="stat-pass">0</span></div>
-    <div>⏰ Süre Bitti: <span id="stat-timeout">0</span></div>
+    <div class="controls d-flex gap-2 my-3">
+      <button onclick="markLetter('success')" class="btn btn-success">Başarılı</button>
+      <button onclick="markLetter('fail')" class="btn btn-danger">Başarısız</button>
+      <button onclick="markLetter('pass')" class="btn btn-warning">Pas</button>
+    </div>
+
+    <div class="d-flex gap-3 justify-content-center my-3">
+      <!-- <button class="btn btn-primary" onclick="startMainTimer()">Başlat</button>
+      <button class="btn btn-secondary" onclick="stopMainTimer()">Durdur</button> -->
+
+      <button id="toggle-button" class="btn btn-primary" onclick="toggleTimer()">Başlat</button>
+
+      <button class="btn btn-danger" onclick="resetGame()">Sıfırla</button>
+    </div>
+
+    <div id="stats-container" class="text-center">
+      <div>✔️ Başarılı: <span id="stat-success">0</span></div>
+      <div>❌ Başarısız: <span id="stat-fail">0</span></div>
+      <div>➡️ Pas: <span id="stat-pass">0</span></div>
+      <div>⏰ Süre Bitti: <span id="stat-timeout">0</span></div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
