@@ -1,0 +1,77 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, #6a0dad, #ffffff);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  letter-spacing: 2px; /* Harf arası mesafe */
+}
+
+#main-timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#stats-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  letter-spacing: 1px;
+}
+
+#stats-container div {
+  margin-bottom: 4px;
+}
+
+.circle {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 120px auto 0;
+}
+
+.letter {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.letter:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.success { background-color: green !important; color: white; }
+.fail { background-color: red !important; color: white; }
+.pass { background-color: gold !important; color: black; }
+.timeout { background-color: gray !important; color: white; }
